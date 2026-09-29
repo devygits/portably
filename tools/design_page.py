@@ -83,6 +83,8 @@ def style_block(ns):
     .{ns} .ds-where {{ min-width: 0; margin: 0; overflow: hidden; color: {v('color.text.muted')}; font-size: {v('font.size.sm')}; text-overflow: ellipsis; white-space: nowrap; }}
     .{ns} .ds-where strong {{ color: {v('color.text.primary')}; font-weight: {v('font.weight.medium')}; }}
     .{ns} .ds-actions {{ display: flex; gap: {v('space.2')}; }}
+    .{ns} .ds-sidebar, .{ns} .ds-table {{ scrollbar-width: thin; scrollbar-color: {v('color.text.soft')} transparent; }}
+    .ds-embedded .{ns} .ds-sidebar, .ds-embedded .{ns} .ds-table {{ scrollbar-width: none; }}
     .{ns} .ds-icon-button {{ display: inline-grid; place-items: center; inline-size: 2.5rem; block-size: 2.5rem; padding: 0; border: 1px solid {v('color.border.default')}; border-radius: {v('radius.md')}; background: none; color: {v('color.text.primary')}; cursor: pointer; }}
     .{ns} .ds-icon-button:hover {{ border-color: {v('color.text.muted')}; }}
     .{ns} .ds-icon-button svg {{ inline-size: 1.25rem; block-size: 1.25rem; }}
