@@ -63,6 +63,13 @@
 
 .pbly :where(code, kbd, pre) { font-family: var(--pbly-font-family-mono); }
 
+/* The parts that scroll (sidebar, code, tables) show no scroll bar, on any system; the page's own bar stays. */
+.pbly :where(.docs-layout__sticky, .code-block__pre, .table-scroll) {
+  scrollbar-width: none;
+}
+
+.pbly :where(.docs-layout__sticky, .code-block__pre, .table-scroll)::-webkit-scrollbar { display: none; }
+
 .pbly .eyebrow {
   color: var(--pbly-color-text-link);
   font-family: var(--pbly-text-label-sm-font-family);

@@ -335,6 +335,14 @@ class TokenContract(unittest.TestCase):
             rel = "" if page.name == "index.html" else f"pages/{page.name}"
             self.assertIn(f'<meta property="og:url" content="https://devygits.github.io/portably/{rel}">', text, page.name)
 
+    def test_docs_hide_the_scroll_bars_of_their_scrolling_parts(self):
+        base = (ROOT / "docs/css/base.css").read_text()
+        rule = re.search(r"\.pbly :where\(([^)]*)\) \{([^}]*)\}", base[base.index("The parts that scroll"):]).groups()
+        for scrolling in (".docs-layout__sticky", ".code-block__pre", ".table-scroll"):
+            self.assertIn(scrolling, rule[0])
+        self.assertIn("scrollbar-width: none", rule[1])
+        self.assertNotIn("scrollbar", (ROOT / "docs/css/layout.css").read_text())
+
     def test_docs_open_other_sites_in_a_new_tab(self):
         pages = [ROOT / "docs/index.html", *sorted((ROOT / "docs/pages").glob("*.html"))]
         for page in pages:
@@ -948,6 +956,8 @@ class WorkflowContract(unittest.TestCase):
         self.assertIn('style="background: var(--pbly-color-action-primary)"', page)
         self.assertIn('style="border-radius: var(--pbly-radius-md)"', page)
         self.assertIn('<button class="pbly-btn pbly-btn--primary" type="button">Primary</button>', page)
+        self.assertIn('scrollbar-width: thin; scrollbar-color: var(--pbly-color-text-soft) transparent', page)
+        self.assertIn('.ds-embedded .pbly .ds-sidebar, .ds-embedded .pbly .ds-table { scrollbar-width: none; }', page)
         self.assertIn("Figma: Shop &amp; Co, frame <code>Home</code>.", page)
         self.assertIn("&lt;Inter&gt; replaces Graphik.", page)
         self.assertIn("hero spacing from the design", page)
