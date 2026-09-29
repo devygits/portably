@@ -1,0 +1,24 @@
+.pbly .hero {
+  padding-block: clamp(var(--pbly-space-12), 10vw, var(--pbly-space-16));
+}
+
+.pbly .hero__inner { display: grid; gap: var(--pbly-space-6); }
+
+.pbly .hero__title {
+  max-width: var(--pbly-layout-measure-wide);
+  font-family: var(--pbly-text-heading-lg-font-family);
+  font-size: clamp(var(--pbly-font-size-3xl), 7vw, var(--pbly-font-size-5xl));
+  font-weight: var(--pbly-text-heading-lg-font-weight);
+  line-height: var(--pbly-font-line-height-tight);
+  letter-spacing: var(--pbly-font-tracking-tight);
+}
+
+.pbly .hero__lede {
+  max-width: var(--pbly-layout-measure-normal);
+  color: var(--pbly-color-text-muted);
+  font-family: var(--pbly-text-body-lg-font-family);
+  font-size: var(--pbly-text-body-lg-font-size);
+  line-height: var(--pbly-text-body-lg-line-height);
+}
+
+.pbly .hero__actions { display: flex; flex-wrap: wrap; gap: var(--pbly-space-3); }

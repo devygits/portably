@@ -1,0 +1,29 @@
+@layer pbly-reset {
+  .pbly,
+  .pbly *,
+  .pbly *::before,
+  .pbly *::after { box-sizing: border-box; }
+  .pbly {
+    margin: 0;
+    background: var(--pbly-color-background);
+    color: var(--pbly-color-text-primary);
+    font-family: var(--pbly-text-body-md-font-family);
+    font-size: var(--pbly-text-body-md-font-size);
+    font-weight: var(--pbly-text-body-md-font-weight);
+    line-height: var(--pbly-text-body-md-line-height);
+    letter-spacing: var(--pbly-text-body-md-letter-spacing);
+  }
+  .pbly :where(h1, h2, h3, h4, h5, h6, p, figure) { margin: 0; }
+  .pbly :where(img, svg, video) { display: block; max-width: 100%; }
+  .pbly img { height: auto; }
+  .pbly :where(button, input, select, textarea) { font: inherit; }
+  .pbly :focus-visible { outline: 2px solid var(--pbly-color-action-primary); outline-offset: 3px; }
+  @media (prefers-reduced-motion: reduce) {
+    .pbly *, .pbly *::before, .pbly *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      scroll-behavior: auto !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}

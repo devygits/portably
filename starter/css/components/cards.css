@@ -1,0 +1,26 @@
+.pbly .example-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--pbly-space-6);
+}
+
+.pbly .example-card {
+  display: grid;
+  gap: var(--pbly-space-4);
+  padding: var(--pbly-space-6);
+  border: 1px solid var(--pbly-color-border-default);
+  border-radius: var(--pbly-radius-md);
+  background: var(--pbly-color-surface-raised);
+  box-shadow: var(--pbly-shadow-sm);
+}
+
+.pbly .example-card__title {
+  font-family: var(--pbly-text-heading-md-font-family);
+  font-size: var(--pbly-font-size-xl);
+  font-weight: var(--pbly-font-weight-medium);
+  line-height: var(--pbly-font-line-height-snug);
+}
+
+@media (max-width: 61.25rem) {
+  .pbly .example-grid { grid-template-columns: 1fr; }
+}

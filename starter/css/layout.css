@@ -1,0 +1,75 @@
+.pbly .section {
+  padding-block: var(--pbly-layout-section-padding);
+}
+
+.pbly .wrapper {
+  width: min(100% - 2 * var(--pbly-layout-wrapper-gutter), var(--pbly-layout-wrapper-max));
+  margin-inline: auto;
+}
+
+.pbly .wrapper--narrow {
+  max-width: var(--pbly-layout-wrapper-narrow);
+}
+
+.pbly .section-header {
+  display: grid;
+  max-width: var(--pbly-layout-measure-normal);
+  gap: var(--pbly-space-4);
+  margin-bottom: var(--pbly-space-8);
+}
+
+.pbly .section-header__title {
+  font-family: var(--pbly-text-heading-md-font-family);
+  font-size: var(--pbly-text-heading-md-font-size);
+  font-weight: var(--pbly-text-heading-md-font-weight);
+  line-height: var(--pbly-text-heading-md-line-height);
+  letter-spacing: var(--pbly-text-heading-md-letter-spacing);
+}
+
+.pbly .section-header__intro {
+  color: var(--pbly-color-text-muted);
+  font-size: var(--pbly-text-body-lg-font-size);
+  line-height: var(--pbly-text-body-lg-line-height);
+}
+
+/* App screens. Delete this block when the project has none. */
+.pbly .app-shell {
+  display: grid;
+  grid-template-columns: var(--pbly-layout-sidebar-width) minmax(0, 1fr);
+  grid-template-rows: auto 1fr;
+  grid-template-areas:
+    "sidebar topbar"
+    "sidebar main";
+  min-height: 100vh;
+}
+
+.pbly .app-shell__sidebar { grid-area: sidebar; }
+.pbly .app-shell__topbar { grid-area: topbar; }
+
+.pbly .app-shell__main {
+  display: grid;
+  grid-area: main;
+  align-content: start;
+  gap: var(--pbly-space-6);
+  padding: var(--pbly-space-6);
+}
+
+.pbly .panel {
+  display: grid;
+  align-content: start;
+  gap: var(--pbly-space-4);
+  padding: var(--pbly-space-6);
+  border-radius: var(--pbly-radius-md);
+  background: var(--pbly-color-surface-raised);
+}
+
+@media (max-width: 61.25rem) {
+  .pbly .app-shell {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: auto auto 1fr;
+    grid-template-areas:
+      "topbar"
+      "sidebar"
+      "main";
+  }
+}

@@ -1,0 +1,20 @@
+.pbly a { color: inherit; }
+
+/* Plain <button>s (menu toggles, icon buttons) start without the browser's grey box; pbly-btn keeps its own look. */
+.pbly :where(button) {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.pbly .eyebrow {
+  color: var(--pbly-color-text-muted);
+  font-family: var(--pbly-text-label-sm-font-family);
+  font-size: var(--pbly-text-label-sm-font-size);
+  font-weight: var(--pbly-text-label-sm-font-weight);
+  line-height: var(--pbly-text-label-sm-line-height);
+  letter-spacing: var(--pbly-text-label-sm-letter-spacing);
+  text-transform: uppercase;
+}

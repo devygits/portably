@@ -1,0 +1,13 @@
+.pbly .pbly-skip-link {
+  position: absolute;
+  z-index: 1000;
+  top: -10rem;
+  left: var(--pbly-layout-wrapper-gutter);
+  padding: var(--pbly-space-3) var(--pbly-space-4);
+  background: var(--pbly-color-action-primary);
+  color: var(--pbly-color-action-on-primary);
+}
+
+.pbly .pbly-skip-link:focus {
+  top: var(--pbly-space-3);
+}
