@@ -321,6 +321,20 @@ class TokenContract(unittest.TestCase):
         for page in pages:
             self.assertEqual(page.read_text().count('aria-current="page"'), 1, page.name)
 
+    def test_docs_pages_carry_a_sharing_preview(self):
+        image = "https://devygits.github.io/portably/assets/social-preview.png"
+        self.assertTrue((ROOT / "docs/assets/social-preview.png").is_file())
+        pages = [ROOT / "docs/index.html", *sorted((ROOT / "docs/pages").glob("*.html"))]
+        for page in pages:
+            text = page.read_text()
+            for tag in (f'<meta property="og:image" content="{image}">', f'<meta name="twitter:image" content="{image}">',
+                        '<meta name="twitter:card" content="summary_large_image">'):
+                self.assertIn(tag, text, page.name)
+            title = re.search(r"<title>(.*?)</title>", text).group(1)
+            self.assertIn(f'<meta property="og:title" content="{title}">', text, page.name)
+            rel = "" if page.name == "index.html" else f"pages/{page.name}"
+            self.assertIn(f'<meta property="og:url" content="https://devygits.github.io/portably/{rel}">', text, page.name)
+
     def test_docs_open_other_sites_in_a_new_tab(self):
         pages = [ROOT / "docs/index.html", *sorted((ROOT / "docs/pages").glob("*.html"))]
         for page in pages:
