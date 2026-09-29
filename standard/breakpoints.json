@@ -1,0 +1,8 @@
+{
+  "$description": "Shared named breakpoint policy. Changes require a reviewed version update.",
+  "breakpoints": {
+    "smallMaxPx": 640,
+    "mediumMaxPx": 980
+  },
+  "responsiveGuidance": "Start with content-driven CSS; use these named ranges only when intrinsic layout is insufficient. Layout composition belongs in foundation; exact page geometry belongs in project."
+}

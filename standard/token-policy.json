@@ -1,0 +1,5 @@
+{
+  "$description": "Baseline Portably token roles may remain unused in a particular design. Project-added tokens are still checked; explicit exemptions remain exact names/globs supplied here.",
+  "allowUnusedBaselineTokens": true,
+  "allowedUnused": []
+}

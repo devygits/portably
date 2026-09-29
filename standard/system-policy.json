@@ -1,0 +1,59 @@
+{
+  "$description": "How `portably.py check` judges hand-written values in project CSS. Snap thresholds define a 'small inconsistency' that should be normalized to the nearest token. Everything further away is either a logged exception (used once) or a new token step (used in two or more places).",
+  "nominalRootPx": 16,
+  "snap": {
+    "spacingPx": 2,
+    "radiusPx": 2,
+    "fontSizePx": 1,
+    "lineHeight": 0.05,
+    "colorDeltaE": 2.3
+  },
+  "repeatedExceptionLimit": 1,
+  "requiredTokens": {
+    "colour roles": [
+      "color.background",
+      "color.text.primary",
+      "color.text.muted",
+      "color.action.primary",
+      "color.action.hover",
+      "color.action.on-primary",
+      "color.surface.raised",
+      "color.border.default",
+      "color.border.strong"
+    ],
+    "type scale": [
+      "font.family.body",
+      "font.size.xs",
+      "font.size.sm",
+      "font.size.base",
+      "font.size.md",
+      "font.size.lg",
+      "font.size.xl",
+      "font.size.2xl",
+      "font.size.3xl",
+      "font.size.4xl",
+      "font.size.5xl",
+      "font.weight.regular",
+      "font.weight.medium",
+      "font.weight.semibold",
+      "font.weight.bold",
+      "text.heading.lg",
+      "text.heading.md",
+      "text.body.md",
+      "text.body.lg",
+      "text.label.sm"
+    ],
+    "radius": ["radius.none", "radius.sm", "radius.md", "radius.lg", "radius.full"],
+    "shadows": ["shadow.sm", "shadow.md", "shadow.lg"],
+    "button tokens": ["button.radius", "button.padding-block", "button.padding-inline", "button.min-height", "button.font-weight"],
+    "layout": [
+      "layout.wrapper.max",
+      "layout.wrapper.narrow",
+      "layout.wrapper.gutter",
+      "layout.section.padding",
+      "layout.sidebar.width",
+      "layout.measure.normal",
+      "layout.measure.wide"
+    ]
+  }
+}

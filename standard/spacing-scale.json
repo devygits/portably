@@ -1,0 +1,25 @@
+{
+  "$description": "Baseline spacing steps every Portably project keeps; values are NOMINAL px at a 16px root and exported as rem. A project may add steps when a value outside the scale is used in two or more places. Added keys follow the same naming rule as the baseline: key = px / 4, with '-5' for a half step (80px -> space.20, 90px -> space.22-5).",
+  "unit": "rem",
+  "steps": {
+    "0": 0,
+    "0-5": 2,
+    "1": 4,
+    "1-5": 6,
+    "2": 8,
+    "2-5": 10,
+    "3": 12,
+    "3-5": 14,
+    "4": 16,
+    "4-5": 18,
+    "5": 20,
+    "6": 24,
+    "7": 28,
+    "8": 32,
+    "9": 36,
+    "10": 40,
+    "12": 48,
+    "16": 64
+  },
+  "nominalRootPx": 16
+}
