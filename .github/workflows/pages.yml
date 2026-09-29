@@ -1,0 +1,67 @@
+name: Publish documentation
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "docs/**"
+      - "foundation/**"
+      - "starter/tokens/**"
+      - "portably.py"
+      - "tools/**"
+      - ".github/workflows/pages.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      - name: Install the browser for the rendered checks
+        run: |
+          pip install playwright
+          playwright install --with-deps chromium
+
+      - name: Check documentation in a browser
+        run: python portably.py check docs --strict
+
+      - name: Generated documentation files are committed
+        run: git diff --exit-code docs/tokens docs/DESIGN-SYSTEM.md docs/DESIGN-SYSTEM.html
+
+  deploy:
+    needs: validate
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload documentation
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
