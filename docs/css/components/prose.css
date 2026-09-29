@@ -1,0 +1,85 @@
+.pbly .prose {
+  line-height: var(--pbly-font-line-height-relaxed);
+}
+
+.pbly .prose > section + section { margin-top: var(--pbly-space-12); }
+
+.pbly .prose h2 {
+  margin-bottom: var(--pbly-space-4);
+  font-family: var(--pbly-text-heading-md-font-family);
+  font-size: var(--pbly-text-heading-md-font-size);
+  font-weight: var(--pbly-text-heading-md-font-weight);
+  line-height: var(--pbly-text-heading-md-line-height);
+  letter-spacing: var(--pbly-text-heading-md-letter-spacing);
+}
+
+.pbly .prose h3 {
+  margin-top: var(--pbly-space-8);
+  margin-bottom: var(--pbly-space-2);
+  font-size: var(--pbly-font-size-md);
+  font-weight: var(--pbly-font-weight-semibold);
+  line-height: var(--pbly-font-line-height-snug);
+}
+
+.pbly .prose p,
+.pbly .prose ul,
+.pbly .prose ol { color: var(--pbly-color-text-muted); }
+
+.pbly .prose p + p,
+.pbly .prose p + ul,
+.pbly .prose p + ol,
+.pbly .prose ul + p,
+.pbly .prose ol + p { margin-top: var(--pbly-space-4); }
+
+.pbly .prose ul,
+.pbly .prose ol {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--pbly-space-2);
+  padding-left: var(--pbly-space-6);
+}
+
+.pbly .prose strong { color: var(--pbly-color-text-primary); font-weight: var(--pbly-font-weight-semibold); }
+
+.pbly .prose a {
+  color: var(--pbly-color-text-link);
+  text-underline-offset: 0.2em;
+}
+
+.pbly .prose :not(pre) > code {
+  padding: var(--pbly-space-0-5) var(--pbly-space-1-5);
+  border: 1px solid var(--pbly-color-border-default);
+  border-radius: var(--pbly-radius-sm);
+  background: var(--pbly-color-surface-raised);
+  color: var(--pbly-color-text-primary);
+  font-size: 0.875em; /* exception: inline code follows the size of the text around it */
+  overflow-wrap: anywhere;
+}
+
+.pbly .prose table {
+  width: 100%;
+  margin-top: var(--pbly-space-4);
+  border-collapse: collapse;
+  font-size: var(--pbly-font-size-sm);
+}
+
+.pbly .prose th,
+.pbly .prose td {
+  padding: var(--pbly-space-3);
+  border-bottom: 1px solid var(--pbly-color-border-default);
+  text-align: left;
+  vertical-align: top;
+}
+
+.pbly .prose th {
+  color: var(--pbly-color-text-primary);
+  font-weight: var(--pbly-font-weight-semibold);
+}
+
+.pbly .prose td { color: var(--pbly-color-text-muted); }
+
+.pbly .prose .table-scroll {
+  overflow-x: auto;
+}
+
+.pbly .prose .table-scroll table { min-width: 36rem; }

@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="The files, page anatomy and class names every Portably project shares.">
+  <title>Project structure · Portably</title>
+  <link rel="stylesheet" href="../foundation/system.css">
+  <link rel="stylesheet" href="../tokens/tokens.css">
+  <link rel="stylesheet" href="../css/project.css">
+  <link rel="icon" href="../assets/portably-mark.svg" type="image/svg+xml">
+  <script>try { if (localStorage.getItem('portably-theme') === 'light') document.documentElement.dataset.theme = 'light'; } catch (error) {}</script>
+  <script src="../js/main.js" defer></script>
+</head>
+<body class="pbly">
+  <a class="pbly-skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrapper site-header__inner">
+      <a class="site-header__brand" href="../index.html">
+        <img class="site-header__logo site-header__logo--on-dark" src="../assets/portably-logo-light-text.svg" alt="Portably" width="96" height="28">
+        <img class="site-header__logo site-header__logo--on-light" src="../assets/portably-logo-dark-text.svg" alt="Portably" width="96" height="28">
+      </a>
+      <span class="site-header__version">v1.0</span>
+      <div class="site-header__actions">
+        <a class="site-header__link" href="https://github.com/devygits/portably/blob/main/CHANGELOG.md" target="_blank" rel="noopener">Changelog<svg class="external-link__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg><span class="visually-hidden"> (opens in a new tab)</span></a>
+        <a class="site-header__link" href="https://github.com/devygits/portably" target="_blank" rel="noopener">GitHub<svg class="external-link__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg><span class="visually-hidden"> (opens in a new tab)</span></a>
+        <button class="site-header__icon-button" type="button" data-js="theme-toggle" aria-label="Light theme" aria-pressed="false"><svg class="site-header__icon--moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20.5 13.5A8.5 8.5 0 1 1 10.5 3.5a6.5 6.5 0 0 0 10 10z"/></svg><svg class="site-header__icon--sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M2.5 12h2M19.5 12h2M5.3 18.7l1.4-1.4M17.3 6.7l1.4-1.4"/></svg></button>
+        <button class="site-header__icon-button site-header__menu" type="button" data-js="nav-toggle" aria-controls="docs-nav" aria-expanded="false" aria-label="Menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrapper docs-layout">
+    <nav class="docs-nav docs-layout__sticky" id="docs-nav" aria-label="Documentation">
+      <div class="docs-nav__group">
+        <p class="docs-nav__title">Getting started</p>
+        <ul class="docs-nav__list">
+          <li><a class="docs-nav__link" href="../index.html">Introduction</a></li>
+          <li><a class="docs-nav__link" href="quickstart.html">Quickstart</a></li>
+          <li><a class="docs-nav__link" href="installation.html">Installation</a></li>
+        </ul>
+      </div>
+      <div class="docs-nav__group">
+        <p class="docs-nav__title">How it works</p>
+        <ul class="docs-nav__list">
+          <li><a class="docs-nav__link" href="workflow.html">The workflow</a></li>
+          <li><a class="docs-nav__link" href="design-system.html">The design system</a></li>
+          <li><a class="docs-nav__link" href="structure.html" aria-current="page">Project structure</a></li>
+          <li><a class="docs-nav__link" href="check.html">The check</a></li>
+        </ul>
+      </div>
+      <div class="docs-nav__group">
+        <p class="docs-nav__title">The output</p>
+        <ul class="docs-nav__list">
+          <li><a class="docs-nav__link" href="output.html">What you get</a></li>
+          <li><a class="docs-nav__link" href="sample.html">Design system sample</a></li>
+          <li><a class="docs-nav__link" href="other-stacks.html">Moving to another stack</a></li>
+        </ul>
+      </div>
+      <div class="docs-nav__group">
+        <p class="docs-nav__title">Reference</p>
+        <ul class="docs-nav__list">
+          <li><a class="docs-nav__link" href="commands.html">Commands</a></li>
+          <li><a class="docs-nav__link" href="findings.html">Findings</a></li>
+          <li><a class="docs-nav__link" href="configuration.html">Configuration</a></li>
+          <li><a class="docs-nav__link" href="theming.html">Theming</a></li>
+          <li><a class="docs-nav__link" href="accessibility.html">Accessibility</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="docs-layout__main" id="main">
+      <article class="prose">
+        <header class="page-header">
+          <p class="eyebrow">How it works</p>
+          <h1 class="page-header__title">Project structure</h1>
+          <p class="page-header__lede">Every Portably project has the same files, the same page skeleton and the same three kinds of class name.</p>
+        </header>
+
+<section id="files">
+<h2>Files</h2>
+<div class="code-block" data-js="code-block" data-lang="tree"><pre class="code-block__pre"><code>site/
+├── index.html              the first page
+├── pages/                  more pages, only when the design has them
+├── foundation/             Portably's shared CSS, never edited
+├── tokens/
+│   ├── tokens.json         the design system
+│   └── tokens.css          generated by check
+├── css/
+│   ├── project.css         imports the four files below, in order
+│   ├── base.css            project-wide element defaults
+│   ├── layout.css          the page anatomy and shared layouts
+│   ├── components.css      imports css/components/*.css
+│   ├── components/         one recurring concept per file
+│   ├── pages.css           imports css/pages/*.css
+│   └── pages/              compositions for one page
+├── js/main.js              behaviour, on data-js hooks
+├── assets/                 images, icons, fonts
+├── AGENTS.md               how to work on the project
+├── DESIGN-SYSTEM.md        generated by check
+├── DESIGN-SYSTEM.html      generated by check
+├── portably.config.json    version, namespace, design context, decisions
+└── README.md               pages, remote dependencies, known gaps</code></pre></div>
+<p>Every page loads <code>foundation/system.css</code>, <code>tokens/tokens.css</code> and <code>css/project.css</code>, in that order, and has the class <code>pbly</code> on <code>&lt;body&gt;</code>.</p>
+</section>
+
+<section id="anatomy">
+<h2>Page anatomy</h2>
+<p>Pages share one skeleton with the same names everywhere. <strong>Site pages</strong> stack sections; each section pads its content and holds one wrapper that sets the content width:</p>
+<div class="code-block" data-js="code-block" data-lang="html"><pre class="code-block__pre"><code>&lt;section class="section pricing"&gt;
+  &lt;div class="wrapper"&gt;
+    &lt;header class="section-header"&gt;
+      &lt;p class="eyebrow"&gt;Pricing&lt;/p&gt;
+      &lt;h2 class="section-header__title"&gt;Plans for every team&lt;/h2&gt;
+      &lt;p class="section-header__intro"&gt;Start free and upgrade when you need to.&lt;/p&gt;
+    &lt;/header&gt;
+    &lt;div class="pricing__plans"&gt;…&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/section&gt;</code></pre></div>
+<p><strong>Application screens</strong> such as dashboards use the app shell: <code>app-shell</code> with <code>app-shell__sidebar</code>, <code>app-shell__topbar</code> and <code>app-shell__main</code>, and a <code>panel</code> for each region.</p>
+<p>The values come from tokens, so the design changes how the skeleton looks, never what it is called.</p>
+<p><strong>Other layouts</strong>, such as documentation with a sidebar and a list of contents, keep <code>wrapper</code> for their width and define the layout in <code>css/layout.css</code> under a project name. This site uses <code>docs-layout</code>.</p>
+</section>
+
+<section id="names">
+<h2>Class names</h2>
+<table><thead><tr><th>Kind</th><th>Examples</th><th>Where they come from</th></tr></thead><tbody><tr><td>Page anatomy</td><td><code>section</code> <code>wrapper</code> <code>section-header</code> <code>app-shell</code> <code>panel</code></td><td>Fixed by Portably, the same in every project</td></tr><tr><td>Project names</td><td><code>pricing</code> <code>property-card</code> <code>booking-summary__price</code></td><td>Chosen per project, after what the reader sees</td></tr><tr><td>Portably classes</td><td><code>pbly</code> <code>pbly-btn</code> <code>pbly-skip-link</code></td><td>The shared foundation</td></tr></tbody></table>
+<p>Project names use the BEM pattern: a block, its elements after two underscores, modifiers after two hyphens. There are no utility classes such as <code>mt-4</code> or <code>text-muted</code>; spacing and type live in the CSS, with tokens.</p>
+</section>
+
+<section id="components">
+<h2>Components and pages</h2>
+<p>A <strong>component</strong> is a concept that recurs: a card, the navigation, a search form. It gets one file in <code>css/components/</code>. A composition that belongs to one page stays in <code>css/pages/</code>. Split a stylesheet when a file takes on a second responsibility, not because it got long.</p>
+</section>
+
+<section id="shared">
+<h2>Shared parts</h2>
+<p>There is no build step, so the parts every page shares (the header, the navigation, the footer) are copied into each page. Keep the copies identical: a change to one is a change to all. It keeps every page a plain HTML file that opens anywhere.</p>
+</section>
+
+<section id="behaviour">
+<h2>Behaviour</h2>
+<p>JavaScript lives in <code>js/main.js</code> and finds elements through <code>data-js</code> hooks, never through styling classes, so restyling can't break it. It keeps state such as <code>aria-expanded</code> in step with what happens.</p>
+<div class="code-block" data-js="code-block" data-lang="html"><pre class="code-block__pre"><code>&lt;button type="button" data-js="menu-toggle" aria-controls="site-nav" aria-expanded="false"&gt;Menu&lt;/button&gt;</code></pre></div>
+</section>
+      </article>
+
+      <nav class="pager" aria-label="Previous and next page">
+        <a class="pager__link pager__link--prev" href="design-system.html"><span class="pager__label">Previous</span><span class="pager__title">The design system</span></a>
+<a class="pager__link pager__link--next" href="check.html"><span class="pager__label">Next</span><span class="pager__title">The check</span></a>
+      </nav>
+    </main>
+
+    <aside class="docs-toc docs-layout__sticky" aria-label="On this page">
+      <p class="docs-toc__title">On this page</p>
+      <ul class="docs-toc__list">
+        <li><a class="docs-toc__link" href="#files" data-js="toc-link">Files</a></li>
+        <li><a class="docs-toc__link" href="#anatomy" data-js="toc-link">Page anatomy</a></li>
+        <li><a class="docs-toc__link" href="#names" data-js="toc-link">Class names</a></li>
+        <li><a class="docs-toc__link" href="#components" data-js="toc-link">Components and pages</a></li>
+        <li><a class="docs-toc__link" href="#shared" data-js="toc-link">Shared parts</a></li>
+        <li><a class="docs-toc__link" href="#behaviour" data-js="toc-link">Behaviour</a></li>
+      </ul>
+    </aside>
+  </div>
+
+  <footer class="site-footer">
+    <div class="wrapper site-footer__inner">
+      <p class="site-footer__credit">Portably 1.0 · MIT licence · <a href="sample.html">Built with Portably</a></p>
+      <nav class="site-footer__links" aria-label="Project">
+        <a href="https://github.com/devygits/portably" target="_blank" rel="noopener">GitHub<svg class="external-link__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg><span class="visually-hidden"> (opens in a new tab)</span></a>
+        <a href="https://github.com/devygits/portably/blob/main/CHANGELOG.md" target="_blank" rel="noopener">Changelog<svg class="external-link__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg><span class="visually-hidden"> (opens in a new tab)</span></a>
+        <a href="https://github.com/devygits/portably/blob/main/AGENTS.md" target="_blank" rel="noopener">Guide for AI agents<svg class="external-link__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg><span class="visually-hidden"> (opens in a new tab)</span></a>
+        <a href="https://github.com/devygits/portably/tree/main/standard" target="_blank" rel="noopener">Contracts<svg class="external-link__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg><span class="visually-hidden"> (opens in a new tab)</span></a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Dark mode, brand variations and sections with their own colours.">
+  <title>Theming · Portably</title>
+  <link rel="stylesheet" href="../foundation/system.css">
+  <link rel="stylesheet" href="../tokens/tokens.css">
+  <link rel="stylesheet" href="../css/project.css">
+  <link rel="icon" href="../assets/portably-mark.svg" type="image/svg+xml">
+  <script>try { if (localStorage.getItem('portably-theme') === 'light') document.documentElement.dataset.theme = 'light'; } catch (error) {}</script>
+  <script src="../js/main.js" defer></script>
+</head>
+<body class="pbly">
+  <a class="pbly-skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrapper site-header__inner">
+      <a class="site-header__brand" href="../index.html">
+        <img class="site-header__logo site-header__logo--on-dark" src="../assets/portably-logo-light-text.svg" alt="Portably" width="96" height="28">
+        <img class="site-header__logo site-header__logo--on-light" src="../assets/portably-logo-dark-text.svg" alt="Portably" width="96" height="28">
+      </a>
+      <span class="site-header__version">v1.0</span>
+      <div class="site-header__actions">
+        <a class="site-header__link" href="https://github.com/devygits/portably/blob/main/CHANGELOG.md" target="_blank" rel="noopener">Changelog<svg class="external-link__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg><span class="visually-hidden"> (opens in a new tab)</span></a>
+        <a class="site-header__link" href="https://github.com/devygits/portably" target="_blank" rel="noopener">GitHub<svg class="external-link__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg><span class="visually-hidden"> (opens in a new tab)</span></a>
+        <button class="site-header__icon-button" type="button" data-js="theme-toggle" aria-label="Light theme" aria-pressed="false"><svg class="site-header__icon--moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20.5 13.5A8.5 8.5 0 1 1 10.5 3.5a6.5 6.5 0 0 0 10 10z"/></svg><svg class="site-header__icon--sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M2.5 12h2M19.5 12h2M5.3 18.7l1.4-1.4M17.3 6.7l1.4-1.4"/></svg></button>
+        <button class="site-header__icon-button site-header__menu" type="button" data-js="nav-toggle" aria-controls="docs-nav" aria-expanded="false" aria-label="Menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrapper docs-layout">
+    <nav class="docs-nav docs-layout__sticky" id="docs-nav" aria-label="Documentation">
+      <div class="docs-nav__group">
+        <p class="docs-nav__title">Getting started</p>
+        <ul class="docs-nav__list">
+          <li><a class="docs-nav__link" href="../index.html">Introduction</a></li>
+          <li><a class="docs-nav__link" href="quickstart.html">Quickstart</a></li>
+          <li><a class="docs-nav__link" href="installation.html">Installation</a></li>
+        </ul>
+      </div>
+      <div class="docs-nav__group">
+        <p class="docs-nav__title">How it works</p>
+        <ul class="docs-nav__list">
+          <li><a class="docs-nav__link" href="workflow.html">The workflow</a></li>
+          <li><a class="docs-nav__link" href="design-system.html">The design system</a></li>
+          <li><a class="docs-nav__link" href="structure.html">Project structure</a></li>
+          <li><a class="docs-nav__link" href="check.html">The check</a></li>
+        </ul>
+      </div>
+      <div class="docs-nav__group">
+        <p class="docs-nav__title">The output</p>
+        <ul class="docs-nav__list">
+          <li><a class="docs-nav__link" href="output.html">What you get</a></li>
+          <li><a class="docs-nav__link" href="sample.html">Design system sample</a></li>
+          <li><a class="docs-nav__link" href="other-stacks.html">Moving to another stack</a></li>
+        </ul>
+      </div>
+      <div class="docs-nav__group">
+        <p class="docs-nav__title">Reference</p>
+        <ul class="docs-nav__list">
+          <li><a class="docs-nav__link" href="commands.html">Commands</a></li>
+          <li><a class="docs-nav__link" href="findings.html">Findings</a></li>
+          <li><a class="docs-nav__link" href="configuration.html">Configuration</a></li>
+          <li><a class="docs-nav__link" href="theming.html" aria-current="page">Theming</a></li>
+          <li><a class="docs-nav__link" href="accessibility.html">Accessibility</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="docs-layout__main" id="main">
+      <article class="prose">
+        <header class="page-header">
+          <p class="eyebrow">Reference</p>
+          <h1 class="page-header__title">Theming</h1>
+          <p class="page-header__lede">The colour roles are the theming API. A theme points the same roles at other palette colours.</p>
+        </header>
+
+<section id="modes">
+<h2>Dark and light</h2>
+<p>Add the mode's colours to the palette in <code>tokens.json</code>, then point the roles at them under an attribute or a media query. Components don't change.</p>
+<div class="code-block" data-js="code-block" data-lang="css"><pre class="code-block__pre"><code>.pbly[data-theme="dark"] {
+  --pbly-color-background: var(--pbly-color-palette-night);
+  --pbly-color-text-primary: var(--pbly-color-palette-snow);
+  --pbly-color-text-muted: var(--pbly-color-palette-mist);
+  --pbly-color-surface-raised: var(--pbly-color-palette-night-raised);
+  --pbly-color-border-default: var(--pbly-color-palette-night-line);
+}</code></pre></div>
+<p>For the visitor's system setting, put the same overrides inside <code>@media (prefers-color-scheme: dark)</code>. Overrides point at palette tokens, never raw colours; <code>check</code> flags raw colours. <code>check</code> finds both kinds of theme and measures the text of every page in each one.</p>
+</section>
+
+<section id="this-site">
+<h2>This site</h2>
+<p>This documentation is dark by default. Its tokens hold both palettes, and the theme toggle points the roles at the light one. The code blocks keep their own roles, so they stay dark in both themes.</p>
+<p><code>check</code> finds the light theme in the CSS and measures every page in it as well as in the default dark one.</p>
+</section>
+
+<section id="sections">
+<h2>Sections with their own colours</h2>
+<p>The same pattern works for any number of contexts, such as a page that alternates dark and light sections:</p>
+<div class="code-block" data-js="code-block" data-lang="css"><pre class="code-block__pre"><code>.pbly .ground-dark {
+  --pbly-color-background: var(--pbly-color-palette-pine);
+  --pbly-color-text-primary: var(--pbly-color-palette-snow);
+  background: var(--pbly-color-background);
+  color: var(--pbly-color-text-primary);
+}</code></pre></div>
+<p>When a context needs a role Portably doesn't have, such as a chip background, add it under <code>color.*</code> in <code>tokens.json</code> and override it the same way. The browser check measures text in every context, so each one must be readable on its own.</p>
+</section>
+
+<section id="brand">
+<h2>Brand variations</h2>
+<p>A project changes the values behind the roles in <code>tokens.json</code>; it never renames public classes or edits <code>foundation/</code>. The button takes its shape from the <code>button.*</code> tokens and its colours from the action roles, so a rounder or roomier button is one line in <code>tokens.json</code>.</p>
+</section>
+      </article>
+
+      <nav class="pager" aria-label="Previous and next page">
+        <a class="pager__link pager__link--prev" href="configuration.html"><span class="pager__label">Previous</span><span class="pager__title">Configuration</span></a>
+<a class="pager__link pager__link--next" href="accessibility.html"><span class="pager__label">Next</span><span class="pager__title">Accessibility</span></a>
+      </nav>
+    </main>
+
+    <aside class="docs-toc docs-layout__sticky" aria-label="On this page">
+      <p class="docs-toc__title">On this page</p>
+      <ul class="docs-toc__list">
+        <li><a class="docs-toc__link" href="#modes" data-js="toc-link">Dark and light</a></li>
+        <li><a class="docs-toc__link" href="#this-site" data-js="toc-link">This site</a></li>
+        <li><a class="docs-toc__link" href="#sections" data-js="toc-link">Sections with their own colours</a></li>
+        <li><a class="docs-toc__link" href="#brand" data-js="toc-link">Brand variations</a></li>
+      </ul>
+    </aside>
+  </div>
+
+  <footer class="site-footer">
+    <div class="wrapper site-footer__inner">
+      <p class="site-footer__credit">Portably 1.0 · MIT licence · <a href="sample.html">Built with Portably</a></p>
+      <nav class="site-footer__links" aria-label="Project">
+        <a href="https://github.com/devygits/portably" target="_blank" rel="noopener">GitHub<svg class="external-link__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg><span class="visually-hidden"> (opens in a new tab)</span></a>
+        <a href="https://github.com/devygits/portably/blob/main/CHANGELOG.md" target="_blank" rel="noopener">Changelog<svg class="external-link__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg><span class="visually-hidden"> (opens in a new tab)</span></a>
+        <a href="https://github.com/devygits/portably/blob/main/AGENTS.md" target="_blank" rel="noopener">Guide for AI agents<svg class="external-link__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg><span class="visually-hidden"> (opens in a new tab)</span></a>
+        <a href="https://github.com/devygits/portably/tree/main/standard" target="_blank" rel="noopener">Contracts<svg class="external-link__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg><span class="visually-hidden"> (opens in a new tab)</span></a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>

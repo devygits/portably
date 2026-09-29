@@ -1,0 +1,95 @@
+.pbly .site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  border-bottom: 1px solid var(--pbly-color-border-default);
+  background: color-mix(in srgb, var(--pbly-color-background) 88%, transparent);
+  backdrop-filter: blur(12px);
+}
+
+.pbly .site-header__inner {
+  display: flex;
+  align-items: center;
+  gap: var(--pbly-space-3);
+  min-height: var(--pbly-layout-header-height);
+}
+
+.pbly .site-header__brand {
+  display: flex;
+  align-items: center;
+}
+
+.pbly .site-header__logo {
+  width: auto;
+  height: var(--pbly-space-7);
+}
+
+.pbly .site-header__logo--on-light,
+:root[data-theme="light"] .pbly .site-header__logo--on-dark { display: none; }
+:root[data-theme="light"] .pbly .site-header__logo--on-light { display: block; }
+
+.pbly .site-header__version {
+  padding: var(--pbly-space-0-5) var(--pbly-space-2);
+  border: 1px solid var(--pbly-color-border-default);
+  border-radius: var(--pbly-radius-full);
+  color: var(--pbly-color-text-muted);
+  font-size: var(--pbly-font-size-xs);
+  font-weight: var(--pbly-font-weight-medium);
+}
+
+.pbly .site-header__actions {
+  display: flex;
+  align-items: center;
+  gap: var(--pbly-space-2);
+  margin-left: auto;
+}
+
+.pbly .site-header__link {
+  padding: var(--pbly-space-2) var(--pbly-space-3);
+  border-radius: var(--pbly-radius-md);
+  color: var(--pbly-color-text-muted);
+  font-size: var(--pbly-font-size-sm);
+  font-weight: var(--pbly-font-weight-medium);
+  text-decoration: none;
+}
+
+.pbly .site-header__link:hover { color: var(--pbly-color-text-primary); }
+
+/* On the design-system sample, the way back stands out from the other links. */
+.pbly .site-header__link--back { color: var(--pbly-color-text-primary); }
+
+.pbly .site-header__icon-button {
+  display: grid;
+  place-items: center;
+  width: var(--pbly-space-10);
+  height: var(--pbly-space-10);
+  border: 1px solid var(--pbly-color-border-default);
+  border-radius: var(--pbly-radius-md);
+  color: var(--pbly-color-text-muted);
+}
+
+.pbly .site-header__icon-button:hover {
+  border-color: var(--pbly-color-border-strong);
+  color: var(--pbly-color-text-primary);
+}
+
+.pbly .site-header__icon-button svg {
+  width: var(--pbly-space-5);
+  height: var(--pbly-space-5);
+}
+
+.pbly .site-header__icon--sun,
+:root[data-theme="light"] .pbly .site-header__icon--moon { display: none; }
+:root[data-theme="light"] .pbly .site-header__icon--sun { display: block; }
+
+.pbly .site-header__menu,
+.pbly .site-header__back { display: none; }
+
+@media (max-width: 61.25rem) {
+  .pbly .site-header__menu { display: grid; }
+}
+
+@media (max-width: 40rem) {
+  .pbly .site-header__link { display: none; }
+  .pbly .site-header__back { display: grid; }
+}

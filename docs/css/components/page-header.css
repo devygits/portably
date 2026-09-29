@@ -1,0 +1,19 @@
+.pbly .page-header {
+  display: grid;
+  gap: var(--pbly-space-3);
+  margin-bottom: var(--pbly-space-10);
+}
+
+.pbly .page-header__title {
+  font-family: var(--pbly-text-heading-lg-font-family);
+  font-size: clamp(var(--pbly-font-size-2xl), 5vw, var(--pbly-text-heading-lg-font-size));
+  font-weight: var(--pbly-text-heading-lg-font-weight);
+  line-height: var(--pbly-text-heading-lg-line-height);
+  letter-spacing: var(--pbly-text-heading-lg-letter-spacing);
+}
+
+.pbly .page-header__lede {
+  color: var(--pbly-color-text-muted);
+  font-size: var(--pbly-font-size-lg);
+  line-height: var(--pbly-font-line-height-relaxed);
+}

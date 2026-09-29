@@ -1,0 +1,46 @@
+.pbly .flow {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--pbly-space-3);
+  margin-block: var(--pbly-space-6);
+  padding: 0;
+  list-style: none;
+}
+
+.pbly .prose .flow { padding-left: 0; }
+
+.pbly .flow__step {
+  display: grid;
+  align-content: start;
+  gap: var(--pbly-space-1);
+  padding: var(--pbly-space-4);
+  border: 1px solid var(--pbly-color-border-default);
+  border-radius: var(--pbly-radius-lg);
+  background: var(--pbly-color-surface-raised);
+}
+
+.pbly .flow__step:last-child {
+  border-color: var(--pbly-color-action-primary);
+}
+
+.pbly .flow__label {
+  color: var(--pbly-color-text-soft);
+  font-size: var(--pbly-font-size-xs);
+  font-weight: var(--pbly-font-weight-semibold);
+}
+
+.pbly .flow__title {
+  color: var(--pbly-color-text-primary);
+  font-weight: var(--pbly-font-weight-semibold);
+  line-height: var(--pbly-font-line-height-snug);
+}
+
+.pbly .prose .flow__text {
+  color: var(--pbly-color-text-muted);
+  font-size: var(--pbly-font-size-sm);
+  line-height: var(--pbly-font-line-height-body);
+}
+
+@media (max-width: 40rem) {
+  .pbly .flow { grid-template-columns: minmax(0, 1fr); }
+}

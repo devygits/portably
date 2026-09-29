@@ -1,0 +1,17 @@
+.pbly .callout {
+  display: grid;
+  gap: var(--pbly-space-1);
+  margin-block: var(--pbly-space-6);
+  padding: var(--pbly-space-4) var(--pbly-space-5);
+  border: 1px solid var(--pbly-color-border-default);
+  border-left: 3px solid var(--pbly-color-action-primary);
+  border-radius: var(--pbly-radius-md);
+  background: var(--pbly-color-surface-raised);
+}
+
+.pbly .callout__title {
+  color: var(--pbly-color-text-primary);
+  font-weight: var(--pbly-font-weight-semibold);
+}
+
+.pbly .prose .callout p + p { margin-top: var(--pbly-space-2); }

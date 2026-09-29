@@ -1,0 +1,73 @@
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url("../assets/fonts/inter-latin.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+:root { color-scheme: dark; }
+:root[data-theme="light"] { color-scheme: light; }
+
+/* Light theme: the same roles, pointed at the light palette. */
+:root[data-theme="light"] .pbly {
+  --pbly-color-background: var(--pbly-color-palette-white);
+  --pbly-color-text-primary: var(--pbly-color-palette-ink);
+  --pbly-color-text-muted: var(--pbly-color-palette-graphite);
+  --pbly-color-text-soft: var(--pbly-color-palette-slate);
+  --pbly-color-text-link: var(--pbly-color-palette-violet-deep);
+  --pbly-color-surface-raised: var(--pbly-color-palette-white);
+  --pbly-color-border-default: var(--pbly-color-palette-fog);
+  --pbly-color-border-strong: var(--pbly-color-palette-ink);
+  --pbly-color-code-surface: var(--pbly-color-palette-cloud);
+  --pbly-color-code-text: var(--pbly-color-palette-ink);
+  --pbly-color-code-comment: var(--pbly-color-palette-slate);
+  --pbly-color-code-keyword: var(--pbly-color-palette-violet-deep);
+  --pbly-color-code-name: var(--pbly-color-palette-cobalt);
+  --pbly-color-code-string: var(--pbly-color-palette-green);
+  --pbly-color-code-value: var(--pbly-color-palette-amber);
+  --pbly-color-code-tree: var(--pbly-color-palette-ash);
+}
+
+.pbly a { color: inherit; }
+
+/* Links to other sites open in a new tab and say so. */
+.pbly .external-link__icon {
+  display: inline-block;
+  width: var(--pbly-space-3);
+  height: var(--pbly-space-3);
+  margin-left: var(--pbly-space-0-5);
+  vertical-align: baseline;
+}
+
+.pbly .visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.pbly :where(button) {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+}
+
+.pbly :where(h1, h2, h3) { scroll-margin-top: calc(var(--pbly-layout-header-height) + var(--pbly-space-6)); }
+
+.pbly :where(code, kbd, pre) { font-family: var(--pbly-font-family-mono); }
+
+.pbly .eyebrow {
+  color: var(--pbly-color-text-link);
+  font-family: var(--pbly-text-label-sm-font-family);
+  font-size: var(--pbly-font-size-sm);
+  font-weight: var(--pbly-text-label-sm-font-weight);
+  line-height: var(--pbly-text-label-sm-line-height);
+  letter-spacing: var(--pbly-text-label-sm-letter-spacing);
+}

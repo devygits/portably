@@ -1,0 +1,50 @@
+.pbly .card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 16rem), 1fr));
+  gap: var(--pbly-space-4);
+  margin-block: var(--pbly-space-6);
+}
+
+.pbly .card {
+  display: grid;
+  align-content: start;
+  gap: var(--pbly-space-2);
+  padding: var(--pbly-space-5);
+  border: 1px solid var(--pbly-color-border-default);
+  border-radius: var(--pbly-radius-lg);
+  background: var(--pbly-color-surface-raised);
+  text-decoration: none;
+}
+
+.pbly a.card:hover { border-color: var(--pbly-color-action-primary); }
+
+.pbly .card__icon {
+  display: grid;
+  place-items: center;
+  width: var(--pbly-space-9);
+  height: var(--pbly-space-9);
+  margin-bottom: var(--pbly-space-2);
+  border-radius: var(--pbly-radius-md);
+  background: var(--pbly-color-action-primary);
+  color: var(--pbly-color-action-on-primary);
+}
+
+.pbly .card__icon svg {
+  width: var(--pbly-space-5);
+  height: var(--pbly-space-5);
+}
+
+.pbly .card__title {
+  color: var(--pbly-color-text-primary);
+  font-size: var(--pbly-font-size-base);
+  font-weight: var(--pbly-font-weight-semibold);
+  line-height: var(--pbly-font-line-height-snug);
+}
+
+.pbly .prose .card__title { margin: 0; font-size: var(--pbly-font-size-base); }
+
+.pbly .card__text {
+  color: var(--pbly-color-text-muted);
+  font-size: var(--pbly-font-size-sm);
+  line-height: var(--pbly-font-line-height-body);
+}

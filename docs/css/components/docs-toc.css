@@ -1,0 +1,22 @@
+.pbly .docs-toc__title {
+  margin-bottom: var(--pbly-space-3);
+  color: var(--pbly-color-text-primary);
+  font-size: var(--pbly-font-size-sm);
+  font-weight: var(--pbly-font-weight-semibold);
+}
+
+.pbly .docs-toc__list {
+  display: grid;
+  gap: var(--pbly-space-2);
+  padding: 0;
+  list-style: none;
+}
+
+.pbly .docs-toc__link {
+  color: var(--pbly-color-text-muted);
+  font-size: var(--pbly-font-size-sm);
+  text-decoration: none;
+}
+
+.pbly .docs-toc__link:hover,
+.pbly .docs-toc__link[aria-current="true"] { color: var(--pbly-color-text-link); }

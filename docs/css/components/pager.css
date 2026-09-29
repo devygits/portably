@@ -1,0 +1,39 @@
+.pbly .pager {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--pbly-space-4);
+  margin-top: var(--pbly-space-16);
+  padding-top: var(--pbly-space-8);
+  border-top: 1px solid var(--pbly-color-border-default);
+}
+
+.pbly .pager__link {
+  display: grid;
+  gap: var(--pbly-space-1);
+  padding: var(--pbly-space-4) var(--pbly-space-5);
+  border: 1px solid var(--pbly-color-border-default);
+  border-radius: var(--pbly-radius-lg);
+  text-decoration: none;
+}
+
+.pbly .pager__link:hover { border-color: var(--pbly-color-action-primary); }
+
+.pbly .pager__link--next {
+  grid-column: 2;
+  text-align: right;
+}
+
+.pbly .pager__label {
+  color: var(--pbly-color-text-soft);
+  font-size: var(--pbly-font-size-sm);
+}
+
+.pbly .pager__title {
+  color: var(--pbly-color-text-link);
+  font-weight: var(--pbly-font-weight-semibold);
+}
+
+@media (max-width: 40rem) {
+  .pbly .pager { grid-template-columns: minmax(0, 1fr); }
+  .pbly .pager__link--next { grid-column: auto; }
+}

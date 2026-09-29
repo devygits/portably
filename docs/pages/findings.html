@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Every kind of finding python portably.py check can report, and what to do about it.">
+  <title>Findings · Portably</title>
+  <link rel="stylesheet" href="../foundation/system.css">
+  <link rel="stylesheet" href="../tokens/tokens.css">
+  <link rel="stylesheet" href="../css/project.css">
+  <link rel="icon" href="../assets/portably-mark.svg" type="image/svg+xml">
+  <script>try { if (localStorage.getItem('portably-theme') === 'light') document.documentElement.dataset.theme = 'light'; } catch (error) {}</script>
+  <script src="../js/main.js" defer></script>
+</head>
+<body class="pbly">
+  <a class="pbly-skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrapper site-header__inner">
+      <a class="site-header__brand" href="../index.html">
+        <img class="site-header__logo site-header__logo--on-dark" src="../assets/portably-logo-light-text.svg" alt="Portably" width="96" height="28">
+        <img class="site-header__logo site-header__logo--on-light" src="../assets/portably-logo-dark-text.svg" alt="Portably" width="96" height="28">
+      </a>
+      <span class="site-header__version">v1.0</span>
+      <div class="site-header__actions">
+        <a class="site-header__link" href="https://github.com/devygits/portably/blob/main/CHANGELOG.md" target="_blank" rel="noopener">Changelog<svg class="external-link__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg><span class="visually-hidden"> (opens in a new tab)</span></a>
+        <a class="site-header__link" href="https://github.com/devygits/portably" target="_blank" rel="noopener">GitHub<svg class="external-link__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg><span class="visually-hidden"> (opens in a new tab)</span></a>
+        <button class="site-header__icon-button" type="button" data-js="theme-toggle" aria-label="Light theme" aria-pressed="false"><svg class="site-header__icon--moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20.5 13.5A8.5 8.5 0 1 1 10.5 3.5a6.5 6.5 0 0 0 10 10z"/></svg><svg class="site-header__icon--sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M2.5 12h2M19.5 12h2M5.3 18.7l1.4-1.4M17.3 6.7l1.4-1.4"/></svg></button>
+        <button class="site-header__icon-button site-header__menu" type="button" data-js="nav-toggle" aria-controls="docs-nav" aria-expanded="false" aria-label="Menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrapper docs-layout">
+    <nav class="docs-nav docs-layout__sticky" id="docs-nav" aria-label="Documentation">
+      <div class="docs-nav__group">
+        <p class="docs-nav__title">Getting started</p>
+        <ul class="docs-nav__list">
+          <li><a class="docs-nav__link" href="../index.html">Introduction</a></li>
+          <li><a class="docs-nav__link" href="quickstart.html">Quickstart</a></li>
+          <li><a class="docs-nav__link" href="installation.html">Installation</a></li>
+        </ul>
+      </div>
+      <div class="docs-nav__group">
+        <p class="docs-nav__title">How it works</p>
+        <ul class="docs-nav__list">
+          <li><a class="docs-nav__link" href="workflow.html">The workflow</a></li>
+          <li><a class="docs-nav__link" href="design-system.html">The design system</a></li>
+          <li><a class="docs-nav__link" href="structure.html">Project structure</a></li>
+          <li><a class="docs-nav__link" href="check.html">The check</a></li>
+        </ul>
+      </div>
+      <div class="docs-nav__group">
+        <p class="docs-nav__title">The output</p>
+        <ul class="docs-nav__list">
+          <li><a class="docs-nav__link" href="output.html">What you get</a></li>
+          <li><a class="docs-nav__link" href="sample.html">Design system sample</a></li>
+          <li><a class="docs-nav__link" href="other-stacks.html">Moving to another stack</a></li>
+        </ul>
+      </div>
+      <div class="docs-nav__group">
+        <p class="docs-nav__title">Reference</p>
+        <ul class="docs-nav__list">
+          <li><a class="docs-nav__link" href="commands.html">Commands</a></li>
+          <li><a class="docs-nav__link" href="findings.html" aria-current="page">Findings</a></li>
+          <li><a class="docs-nav__link" href="configuration.html">Configuration</a></li>
+          <li><a class="docs-nav__link" href="theming.html">Theming</a></li>
+          <li><a class="docs-nav__link" href="accessibility.html">Accessibility</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="docs-layout__main" id="main">
+      <article class="prose">
+        <header class="page-header">
+          <p class="eyebrow">Reference</p>
+          <h1 class="page-header__title">Findings</h1>
+          <p class="page-header__lede">Every finding says what happened, why it matters and what to do. These are all of them.</p>
+        </header>
+
+<section id="about">
+<h2>About this list</h2>
+<p>Every kind of finding <code>check</code> can report, grouped by area. The kind is what <code>--json</code> reports in <code>kind</code>; it doesn't change within a major version.</p>
+</section>
+
+<section id="safety">
+<h2>Safety</h2>
+<h3 id="missing-alt">Images without a text description</h3><p><code>missing-alt</code> · Problem</p><p>Screen-reader users get no description, and nothing shows if the image fails to load.</p><p><strong>What to do:</strong> Add alt="…" describing the image, or alt="" if it is purely decorative.</p>
+<h3 id="broken-link">Links that go nowhere</h3><p><code>broken-link</code> · Problem</p><p>Visitors click and land on a missing page or section.</p><p><strong>What to do:</strong> Point each link at a page that exists or an id on the page.</p>
+<h3 id="missing-file">Missing files</h3><p><code>missing-file</code> · Problem</p><p>The page asks for an image, stylesheet or script that isn't in the project, so something won't show.</p><p><strong>What to do:</strong> Add the file to the project (images go in assets/) or correct the path.</p>
+<h3 id="bad-image">Images saved with the wrong file type</h3><p><code>bad-image</code> · Problem</p><p>The file's content doesn't match its extension; some browsers and servers refuse it.</p><p><strong>What to do:</strong> Re-export the image in the format its name says, or rename it.</p>
+<h3 id="overflow">Pages wider than the screen</h3><p><code>overflow</code> · Problem</p><p>Visitors have to scroll sideways, usually on phones.</p><p><strong>What to do:</strong> Find the element that is too wide at that screen width and let it wrap or shrink.</p>
+<h3 id="cut-off">Text cut off at the edge of the screen</h3><p><code>cut-off</code> · Problem</p><p>Visitors can't read the part that's cut off, and they can't scroll to it.</p><p><strong>What to do:</strong> Let the text wrap or shrink at that width, for example a smaller size on phones with clamp(var(--small-token), 6vw, var(--large-token)).</p>
+<h3 id="image-failed">Images that fail to load in the browser</h3><p><code>image-failed</code> · Problem</p><p>Visitors see an empty space or a broken-image icon.</p><p><strong>What to do:</strong> Check the file and its path.</p>
+<h3 id="script-error">JavaScript errors</h3><p><code>script-error</code> · Problem</p><p>Interactions on the page may stop working.</p><p><strong>What to do:</strong> Open the page with the browser's developer console open and fix the error shown.</p>
+<h3 id="low-contrast">Text that&#x27;s hard to read</h3><p><code>low-contrast</code> · Problem</p><p>Low-contrast text is hard or impossible to read for people with low vision, in sunlight or on a dim screen. The accessibility guideline (WCAG AA) asks for 4.5:1 for normal text and 3:1 for large text.</p><p><strong>What to do:</strong> Make the text darker or the background lighter (or the other way round) until the ratio shown is met. On a photo, darken the overlay behind the text or give the text a solid background. If you change a colour from the design, record it under "readability" in portably.config.json.</p>
+<h3 id="contrast-roles">Colour roles that are hard to read together</h3><p><code>contrast-roles</code> · Problem</p><p>These colours are meant to be used together, so every page that uses them inherits the problem.</p><p><strong>What to do:</strong> Use the shade shown (or adjust one of the two colours) in tokens.json. If it changes a colour from the design, add a line to "readability" in portably.config.json, for example "color.palette.green #00915E → #008855: white button text needs 4.5:1".</p>
+<h3 id="fake-button">Clickable elements that aren&#x27;t real buttons</h3><p><code>fake-button</code> · Note</p><p>Keyboard users can't reach or press them unless extra code handles focus, Enter and Space.</p><p><strong>What to do:</strong> Use a real &lt;button&gt;, or confirm the element handles focus, Enter and Space.</p>
+<h3 id="console-error">Errors in the browser console</h3><p><code>console-error</code> · Note</p><p>Something on the page didn't load or run as expected.</p><p><strong>What to do:</strong> Open the page with the developer console open and read the message.</p>
+<h3 id="browser-skipped">The browser checks didn&#x27;t run</h3><p><code>browser-skipped</code> · Note</p><p>Sideways scrolling, images that fail to load, script errors and the contrast of the text on screen weren't checked.</p><p><strong>What to do:</strong> Install Playwright (pip install playwright, then: playwright install chromium) and check again. If this machine can't run it, check with --no-browser and say so in the README.</p>
+</section>
+
+<section id="system">
+<h2>Design system</h2>
+<h3 id="token-error">The design system file can&#x27;t be read</h3><p><code>token-error</code> · Problem</p><p>Without a readable tokens.json, no colour, size or spacing in the project can be checked or updated.</p><p><strong>What to do:</strong> Correct tokens/tokens.json using the message below; the rest of the design-system check runs once it reads.</p>
+<h3 id="tokens">Incomplete design system</h3><p><code>tokens</code> · Problem</p><p>Every Portably project keeps the full set of colour roles, type sizes, spacing, radii, shadows and layout widths, so the next screen always has a value to reach for.</p><p><strong>What to do:</strong> Restore what's missing from the Portably starter (starter/tokens/tokens.json), changing the value if the design needs a different one.</p>
+<h3 id="token-value">Values typed by hand that already exist as tokens</h3><p><code>token-value</code> · Problem</p><p>They look right today but won't follow when the token changes.</p><p><strong>What to do:</strong> Use the token instead. <code>fix</code> does this for you.</p>
+<h3 id="snap">Values almost the same as a token</h3><p><code>snap</code> · Problem</p><p>Near-identical values, like 15px next to a 16px step, are usually slips, and they make the design drift.</p><p><strong>What to do:</strong> Snap them to the token. <code>fix</code> does this for you and records each one in DESIGN-SYSTEM.md.</p>
+<h3 id="fallback">Token values repeated as fallbacks</h3><p><code>fallback</code> · Problem</p><p><code>var(--token, 8px)</code> keeps a second copy of the value, which goes stale when the token changes.</p><p><strong>What to do:</strong> Keep only the token. <code>fix</code> removes the copy.</p>
+<h3 id="root-size">A changed base text size</h3><p><code>root-size</code> · Problem</p><p>Portably's sizes assume the browser's 16px base. Changing it quietly rescales every token, so the system no longer means what it says (a 1440px width becomes 1530px).</p><p><strong>What to do:</strong> Remove it and put the design's real sizes in tokens.json (its body size in font.size.base).</p>
+<h3 id="hidden-token">Design values kept outside tokens.json</h3><p><code>hidden-token</code> · Problem</p><p>A second, hidden set of values means tokens.json is no longer the one place the design lives.</p><p><strong>What to do:</strong> Move the value into tokens.json, then point the variable at the token.</p>
+<h3 id="unknown-variable">References to tokens that don&#x27;t exist</h3><p><code>unknown-variable</code> · Problem</p><p>The browser ignores them, so the style silently disappears.</p><p><strong>What to do:</strong> Correct the name, or add the token to tokens.json.</p>
+<h3 id="unused-token">Tokens you added but never use</h3><p><code>unused-token</code> · Problem</p><p>An unused token usually means the design moved on, or something was built without it.</p><p><strong>What to do:</strong> Use it where the design needs it, or delete it from tokens.json.</p>
+<h3 id="promote">Repeated values that aren&#x27;t in the system yet</h3><p><code>promote</code> · Decision</p><p>A value used in several places is a design decision. Recording it once keeps every use in sync.</p><p><strong>What to do:</strong> If it's intentional, add it to the system with the command shown. If it's drift, change each place to an existing token.</p>
+<h3 id="off-system">One-off values outside the system</h3><p><code>off-system</code> · Decision</p><p>Portably can't tell whether each one is a deliberate choice or drift.</p><p><strong>What to do:</strong> Deliberate: add /* exception: reason */ at the end of the line. Drift: use the closest token.</p>
+<h3 id="shadow">Shadows written by hand</h3><p><code>shadow</code> · Decision</p><p>Hand-written shadows drift apart from each other over time.</p><p><strong>What to do:</strong> Use shadow.sm, shadow.md or shadow.lg, add a repeated one with the command shown, or mark a deliberate one-off with /* exception: reason */.</p>
+<h3 id="breakpoint">Screen widths outside the project&#x27;s breakpoints</h3><p><code>breakpoint</code> · Decision</p><p>Layouts that change at many slightly different widths are hard to test and maintain.</p><p><strong>What to do:</strong> Use a project breakpoint, add a repeated one with the command shown, or mark a one-off with /* exception: reason */ on the @media line.</p>
+<h3 id="stale-exception">Exception comments that are no longer needed</h3><p><code>stale-exception</code> · Note</p><p>The value now follows the system, so the comment only adds noise to the exception list.</p><p><strong>What to do:</strong> Remove the comment. <code>fix</code> does this for you.</p>
+</section>
+
+<section id="structure">
+<h2>Structure</h2>
+<h3 id="missing-path">Missing project files</h3><p><code>missing-path</code> · Problem</p><p>Every Portably project has the same files, so anyone can find their way around.</p><p><strong>What to do:</strong> Restore them. A fresh <code>python portably.py init</code> folder has a copy of each one to take from.</p>
+<h3 id="foundation-changed">Portably foundation files that were changed or are missing</h3><p><code>foundation-changed</code> · Problem</p><p>foundation/ is shared Portably code (reset, button, skip link). Changes there are hard to find and get lost on update.</p><p><strong>What to do:</strong> <code>fix</code> restores the originals. Put project styles in css/ instead.</p>
+<h3 id="css-entry">Stylesheets out of the Portably order</h3><p><code>css-entry</code> · Problem</p><p>The order decides which rules win; a different order makes styles behave differently in each project.</p><p><strong>What to do:</strong> Keep css/project.css importing base.css, layout.css, components.css and pages.css, in that order.</p>
+<h3 id="css-layer">Cascade layers in project CSS</h3><p><code>css-layer</code> · Problem</p><p>Project styles must stay outside @layer so they reliably override the foundation.</p><p><strong>What to do:</strong> Remove the @layer wrapper from the file.</p>
+<h3 id="page-setup">Pages not set up the Portably way</h3><p><code>page-setup</code> · Problem</p><p>Without the namespace class on &lt;body&gt; and the three stylesheets in order, tokens and foundation styles don't apply.</p><p><strong>What to do:</strong> Give &lt;body&gt; the class shown and load foundation/system.css, tokens/tokens.css and css/project.css, in that order.</p>
+<h3 id="anatomy">Sections outside the page anatomy</h3><p><code>anatomy</code> · Note</p><p>Every Portably page uses section &gt; wrapper, so spacing and widths stay consistent and the markup looks familiar.</p><p><strong>What to do:</strong> Give each &lt;section&gt; in &lt;main&gt; the <code>section</code> class and put its content in &lt;div class="wrapper"&gt;. App screens use app-shell instead.</p>
+<h3 id="inline-style">Inline styles</h3><p><code>inline-style</code> · Note</p><p>Styles inside the HTML are easy to miss when the design changes.</p><p><strong>What to do:</strong> Move them into a stylesheet in css/ unless JavaScript sets them.</p>
+<h3 id="framework">Portably&#x27;s own source is out of sync</h3><p><code>framework</code> · Problem</p><p>The starter, foundation and docs must agree for new projects to start correctly.</p><p><strong>What to do:</strong> Fix the file named below.</p>
+</section>
+
+<section id="handoff">
+<h2>Handoff</h2>
+<h3 id="handoff-file">Missing README.md or AGENTS.md</h3><p><code>handoff-file</code> · Problem</p><p>README.md tells the next person what was built and what's missing; AGENTS.md tells the next person or AI agent how to work on the project and check it.</p><p><strong>What to do:</strong> <code>fix</code> creates them from the Portably templates. Fill in the README's pages and known gaps.</p>
+<h3 id="context-format">Design notes that can&#x27;t be read</h3><p><code>context-format</code> · Problem</p><p>DESIGN-SYSTEM.md lists them for the next person; in another shape they are lost.</p><p><strong>What to do:</strong> In portably.config.json, write "source" as a sentence, and "assumptions", "deviations", "normalizations" and "readability" as lists of sentences.</p>
+<h3 id="source">The design source isn&#x27;t recorded</h3><p><code>source</code> · Note</p><p>Without it, the next person or AI agent can't compare the implementation with what it was built from.</p><p><strong>What to do:</strong> Add "source" to portably.config.json: where the design came from (a Figma file and its frames, screenshots, a website, a brief) and when.</p>
+<h3 id="version">A different or unrecorded Portably version</h3><p><code>version</code> · Note</p><p>Portably's rules only change between major versions; the version tells the next person which ones the project follows.</p><p><strong>What to do:</strong> Read the CHANGELOG entries marked Breaking since the project's version, check again, then set "portably" in portably.config.json to the version shown.</p>
+<h3 id="remote">Files loaded from other websites</h3><p><code>remote</code> · Note</p><p>The project breaks if that site changes or goes offline, and the files may need a licence.</p><p><strong>What to do:</strong> Download them into assets/ where you can; otherwise list them in the README.</p>
+<h3 id="host-root">Paths that start with /</h3><p><code>host-root</code> · Note</p><p>They only work when the site sits at the root of a domain, so they can't be checked here.</p><p><strong>What to do:</strong> Use relative paths (assets/logo.svg) unless the host needs /.</p>
+</section>
+      </article>
+
+      <nav class="pager" aria-label="Previous and next page">
+        <a class="pager__link pager__link--prev" href="commands.html"><span class="pager__label">Previous</span><span class="pager__title">Commands</span></a>
+<a class="pager__link pager__link--next" href="configuration.html"><span class="pager__label">Next</span><span class="pager__title">Configuration</span></a>
+      </nav>
+    </main>
+
+    <aside class="docs-toc docs-layout__sticky" aria-label="On this page">
+      <p class="docs-toc__title">On this page</p>
+      <ul class="docs-toc__list">
+        <li><a class="docs-toc__link" href="#about" data-js="toc-link">About this list</a></li>
+        <li><a class="docs-toc__link" href="#safety" data-js="toc-link">Safety</a></li>
+        <li><a class="docs-toc__link" href="#system" data-js="toc-link">Design system</a></li>
+        <li><a class="docs-toc__link" href="#structure" data-js="toc-link">Structure</a></li>
+        <li><a class="docs-toc__link" href="#handoff" data-js="toc-link">Handoff</a></li>
+      </ul>
+    </aside>
+  </div>
+
+  <footer class="site-footer">
+    <div class="wrapper site-footer__inner">
+      <p class="site-footer__credit">Portably 1.0 · MIT licence · <a href="sample.html">Built with Portably</a></p>
+      <nav class="site-footer__links" aria-label="Project">
+        <a href="https://github.com/devygits/portably" target="_blank" rel="noopener">GitHub<svg class="external-link__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg><span class="visually-hidden"> (opens in a new tab)</span></a>
+        <a href="https://github.com/devygits/portably/blob/main/CHANGELOG.md" target="_blank" rel="noopener">Changelog<svg class="external-link__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg><span class="visually-hidden"> (opens in a new tab)</span></a>
+        <a href="https://github.com/devygits/portably/blob/main/AGENTS.md" target="_blank" rel="noopener">Guide for AI agents<svg class="external-link__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg><span class="visually-hidden"> (opens in a new tab)</span></a>
+        <a href="https://github.com/devygits/portably/tree/main/standard" target="_blank" rel="noopener">Contracts<svg class="external-link__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg><span class="visually-hidden"> (opens in a new tab)</span></a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>

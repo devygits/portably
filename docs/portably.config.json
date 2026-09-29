@@ -1,0 +1,18 @@
+{
+  "portably": "1.0",
+  "namespace": "pbly",
+  "source": "Portably's documentation site, designed directly in code in September 2026 around the Portably logo (SVG files supplied by the owner) and a common documentation layout: a sidebar, the article and a list of its sections.",
+  "assumptions": [
+    "The logo defines no palette; the violet action colour and the neutrals are derived from the logo, and the code colours are chosen to sit with them; all pass contrast in both themes.",
+    "Dark is the default theme; a visitor's choice of the light theme is remembered on their device.",
+    "Text uses Inter, stored with the site, and code uses the visitor's system monospace font; the logo is the only other brand lettering."
+  ],
+  "deviations": [
+    "The layout leaves out a search field: with fourteen pages, the sidebar is enough."
+  ],
+  "normalizations": [],
+  "readability": [],
+  "breakpoints": {
+    "wideMaxPx": 1200
+  }
+}

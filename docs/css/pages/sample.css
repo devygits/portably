@@ -1,0 +1,7 @@
+/* Design system sample: the generated design-system page fills the screen below the header. */
+.pbly .sample__frame {
+  display: block;
+  width: 100%;
+  height: calc(100dvh - var(--pbly-layout-header-height) - 1px);
+  border: 0;
+}

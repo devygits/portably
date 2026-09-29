@@ -1,0 +1,25 @@
+.pbly .pbly-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 100%;
+  min-height: var(--pbly-button-min-height);
+  gap: var(--pbly-space-2);
+  padding: var(--pbly-button-padding-block) var(--pbly-button-padding-inline);
+  border: 1px solid transparent;
+  border-radius: var(--pbly-button-radius);
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  font-weight: var(--pbly-button-font-weight);
+  line-height: var(--pbly-font-line-height-snug);
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.18s, border-color 0.18s, color 0.18s;
+}
+.pbly .pbly-btn--primary { background: var(--pbly-color-action-primary); color: var(--pbly-color-action-on-primary); }
+.pbly .pbly-btn--primary:hover:not(:disabled) { background: var(--pbly-color-action-hover); }
+.pbly .pbly-btn--secondary { border-color: var(--pbly-color-border-default); color: var(--pbly-color-text-primary); }
+.pbly .pbly-btn--secondary:hover:not(:disabled) { border-color: var(--pbly-color-border-strong); }
+.pbly .pbly-btn:disabled { opacity: 0.5; cursor: not-allowed; }
